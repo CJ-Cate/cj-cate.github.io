@@ -1,0 +1,3 @@
+All blogs start somewhere. This one starts here! To solve the simple issue of "needing content" for a blog, why not put down some simple documentation while I am creating this blog. Whether or not this is placeholder or will stay up (or be updated for big blog updates) is to be determined.
+
+The scope for v1 is very simple: Create a static site with a main page that links to blog pages of plaintext.

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Ceja's Blog -- Index</h1>
+
+{% for content in content_list | sort(attribute="datepublished", reverse=True) %}-->
+	<p>
+		<a href="{{ url_for('blog', slug=content) }}">content</a><br/>
+	</p>
+{% endfor %}
+
+{% endblock %}
