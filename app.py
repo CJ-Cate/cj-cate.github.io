@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+from flask_frozen import Freezer
 import os
+import sys
 
 app = Flask(__name__)
+freezer = Freezer(app)
 
 @app.route('/blog/')
 @app.route('/home/')
@@ -20,5 +23,8 @@ def blog(slug):
     return render_template('blog.html', post=post)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    if len(sys.argv) > 1 and sys.argv[1] == "build":
+        freezer.freeze()
+    else:
+        app.run() # app.run(debug=True)
 
