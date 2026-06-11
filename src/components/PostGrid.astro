@@ -1,0 +1,25 @@
+---
+// The two-column flex grid wrapper for PostCard entries. Owns only the list
+// container; each card styles itself (see PostCard.astro) so Astro's scoped
+// styles stay within the component that owns the element.
+---
+
+<ul>
+	<slot />
+</ul>
+
+<style>
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	@media (max-width: 720px) {
+		ul {
+			gap: 0.5em;
+		}
+	}
+</style>

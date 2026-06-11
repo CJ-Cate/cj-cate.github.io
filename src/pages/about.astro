@@ -1,0 +1,13 @@
+---
+import { getEntry, render } from 'astro:content';
+import BlogPost from '../layouts/BlogPost.astro';
+import { ABOUT_POST_ID } from '../lib/posts';
+
+const entry = await getEntry('blog', ABOUT_POST_ID);
+if (!entry) throw new Error(`Missing blog entry: ${ABOUT_POST_ID}`);
+const { Content } = await render(entry);
+---
+
+<BlogPost {...entry.data}>
+	<Content />
+</BlogPost>

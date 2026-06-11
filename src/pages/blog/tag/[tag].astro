@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostGrid from '../../../components/PostGrid.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { getAllTags, getPostsByTag, tagToSlug } from '../../../lib/posts';
+import { SITE_TITLE } from '../../../consts';
+
+export async function getStaticPaths() {
+	const tags = await getAllTags();
+	return Promise.all(
+		tags.map(async (originalTag) => ({
+			params: { tag: tagToSlug(originalTag) },
+			props: { originalTag, posts: await getPostsByTag(originalTag) },
+		})),
+	);
+}
+
+const { originalTag, posts } = Astro.props;
+---
+
+<BaseLayout title={`${originalTag} — ${SITE_TITLE}`} description={`Posts tagged "${originalTag}"`}>
+	<main>
+		<h1>Posts tagged: {originalTag}</h1>
+		<PostGrid>
+			{posts.map((post) => <PostCard post={post} activeTag={originalTag} />)}
+		</PostGrid>
+	</main>
+</BaseLayout>
+
+<style>
+	main {
+		width: 960px;
+	}
+	h1 {
+		margin-bottom: 2rem;
+	}
+</style>

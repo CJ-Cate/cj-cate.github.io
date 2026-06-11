@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<BaseLayout title={`Search — ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+	<main>
+		<h1>Search</h1>
+		<div id="search"></div>
+	</main>
+</BaseLayout>
+
+<script>
+	import { PagefindUI } from '@pagefind/default-ui';
+	import '@pagefind/default-ui/css/ui.css';
+	new PagefindUI({ element: '#search', showImages: false });
+
+	const q = new URLSearchParams(window.location.search).get('q');
+	if (q) {
+		const input = document.querySelector('#search input[type="text"]') as HTMLInputElement | null;
+		if (input) {
+			input.value = q;
+			input.dispatchEvent(new Event('input', { bubbles: true }));
+		}
+	}
+</script>
