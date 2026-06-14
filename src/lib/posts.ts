@@ -14,7 +14,7 @@ export type Post = CollectionEntry<'blog'>;
  * layout and rendering) but is not a real post: it's excluded from listings and
  * the feed, and surfaced only via the dedicated /about page.
  */
-export const ABOUT_POST_ID = 'about-me-in-depth';
+export const ABOUT_POST_ID = 'about-me';
 
 /** Sort comparator: newest published date first. */
 export const byPubDateDesc = (a: Post, b: Post): number =>

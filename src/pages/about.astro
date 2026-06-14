@@ -10,4 +10,25 @@ const { Content } = await render(entry);
 
 <BlogPost {...entry.data}>
 	<Content />
+	<div class="contact-box">
+		<h2>Contact Me</h2>
+		<p><a href="mailto:me@cjcate.com">me@cjcate.com</a></p>
+	</div>
 </BlogPost>
+
+<style>
+	.contact-box {
+		margin-top: 2em;
+		padding: 1.2em 1.5em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+	}
+	.contact-box h2 {
+		margin: 0 0 0.5em 0;
+		font-size: 1.2rem;
+	}
+	.contact-box p {
+		margin: 0;
+	}
+</style>

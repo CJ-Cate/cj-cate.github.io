@@ -1,0 +1,29 @@
+<div class="poc-disclaimer">
+	<strong>Educational use only.</strong> This content is provided exclusively for educational and research
+	purposes. Only use these techniques against systems you own or have been explicitly authorized to
+    test. Unauthorized access to computer systems is unethical, illegal in many countries, and damages the reputation
+    of white-hats everywhere.
+</div>
+
+<style>
+	.poc-disclaimer {
+		border-left: 4px solid #c0392b;
+		background: rgba(192, 57, 43, 0.18);
+		color: inherit;
+		padding: 0.85em 1.1em;
+		border-radius: 0 6px 6px 0;
+		margin-bottom: 1.5em;
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	:root[data-theme='dark'] .poc-disclaimer {
+		background: rgba(192, 57, 43, 0.35);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root:not([data-theme='light']) .poc-disclaimer {
+			background: rgba(192, 57, 43, 0.15);
+		}
+	}
+</style>

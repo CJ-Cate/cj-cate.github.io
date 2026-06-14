@@ -7,6 +7,10 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://cjcate.com',
+	redirects: {
+		'/aboutme': '/about',
+		'/about-me': '/about',
+	},
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
