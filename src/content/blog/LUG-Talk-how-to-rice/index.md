@@ -32,8 +32,8 @@ Welcome to LUG: Linux desktop customization
 It comes from English-speaking slang for Japanese street racers who went "all out" with cosmetics on their cars. 
 
 ---
-![[Pasted image 20260403205707.png|375]]
-![[Pasted image 20260403205650.png|371]]
+![](<./Pasted image 20260403205707.png>)
+![](<./Pasted image 20260403205650.png>)
 
 ---
 
@@ -53,7 +53,7 @@ Also in 1984:
 - The Apple Macintosh was released
 - *Indiana Jones and the Temple of Doom* was released into theatres, leading to the creation of the PG-13 rating
 
-![[Pasted image 20260401202231.png|414]]
+![](<./Pasted image 20260401202231.png>)
 
 ---
 ## Dissecting the Desktop
